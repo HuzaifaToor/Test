@@ -30,9 +30,6 @@ class ImageSimilarityDetector:
                 gray = cv2.GaussianBlur(gray, (radius, radius), 0)
 
         gray = self.draw_color_mask(gray, self.black_mask)
-        cv2.imshow("gray: ", gray)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
 
         return gray
 

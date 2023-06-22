@@ -182,12 +182,8 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--img_dir', type=str, 
-                        default="/home/cinemo-de.internal/hahmad/Downloads/testDataset/dataset-candidates-ml/tempdataset",
+    parser.add_argument('--img_dir', type=str, required=True,
                         help='Path to directory containing similar images')
-
-    # parser.add_argument('--img_dir', type=str, required=True,
-    #                     help='Path to directory containing similar images')
     
     parser.add_argument('--min_cont', type=int, default=500,
                         help='minimum contour area for similarity/change detection  --> lower value, more sensitive for detection and vice versa, ')
