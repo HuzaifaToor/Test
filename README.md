@@ -5,12 +5,12 @@
 
    Answer: The dataset contains the images of parking lot from the cameras installed at various locations covering the imortant parts of the parking lot.
            The images are taken at different times during the day and the night as well. There are few things that could be improved to lessen the effort of data preprocessing prior to training.
-            1.  Naming convension
-               a. better to have same time stamp format
-               b. separation character between camera id and time stamp could be same for uniformity
-            2. Image resolution not same
-            3. corrupt images could be avaoided. For example:  "c21_2021_03_27__10_36_36.png" and "c21_2021_03_27__12_53_37.png"
-            4. Image Quality could be improved usng high resolution cameras (not necessary. case dependent)
+            -  Naming convension
+               - better to have same time stamp format
+               - separation character between camera id and time stamp could be same for uniformity
+            - Image resolution not same
+            - corrupt images could be avaoided. For example:  "c21_2021_03_27__10_36_36.png" and "c21_2021_03_27__12_53_37.png"
+             Image Quality could be improved usng high resolution cameras (not necessary. case dependent)
 
 2. **How does your program work?**
 
@@ -50,7 +50,3 @@
 5. **Any other comments about your solution?**
 
    Answer: As we have independent image list depending upon camera IDs, we can do parallel processing for faster computaions. For example using Multiprocessing Package. For the sake of simplicity, these scripts benifits from iterative approach.
-
-
-
-i
