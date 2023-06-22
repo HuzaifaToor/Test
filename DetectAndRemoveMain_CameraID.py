@@ -12,7 +12,7 @@ from imaging_interview import ImageSimilarityDetector
 output_file = "report.txt"
 
 with open(output_file, "w") as file:
-        file.write("Image\t\t\t\t\t\t\tCompared with\t\t\t\tChange Score\t\tContours\t\t\tStatus\n\n")
+        file.write("Image\t\t\t\tCompared with\t\tChange Score\t\tContours\t\tStatus\n\n")
         file.close()
 
 
@@ -183,7 +183,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--img_dir', type=str, required=True,
-                        help='Path to directory containing similar images')
+                        help='Path to main image directory')
     
     parser.add_argument('--min_cont', type=int, default=500,
                         help='minimum contour area for similarity/change detection  --> lower value, more sensitive for detection and vice versa, ')

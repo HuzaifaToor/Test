@@ -34,8 +34,10 @@
 3. **What values did you decide to use for input parameters and how did you find these values?**
 
    Answer: We can pass two input parameters to the algorithm.
-            1. **Gaussian Blur radius List**. Default is none that results in high sensitivity. We can pass single odd value like 3, 5 7 or list of odd values like [3, 5]. Higher values tend to blurr images more, consequently less details perceiveable, hence lower would be the sensitivity.
-            For me, I set it to default i.e. None --> for higher sensitivity --> higher change perceiveablity
+            1. **Gaussian Blur radius List**. Default is none that in my understanding will result in high sensitivity. We can pass single odd value like 3, 5, 7 or list of odd values like [3, 5]. Higher values tend to blurr images more, removing fine dtails, consequently less details perceiveable, hence lower would be the sensitivity.
+                a. For me, I set it to [3] --> for better sensitivity --> good change perceiveablity and small smooting incase of any noise
+                b. In some cases, Gaussian blurring may result in **increase of change score** as it may remove **noise** or unnecessary detail. 
+
             2. **Minimum Contour Area**. if we need higher change score and want our algo to be more sensitive, we can set this value to low i.e 300 or 500. More contours, including small and potentially insignificant ones, will be considered for the change score calculation. The change score may increase because even small changes in the image will contribute to the score. Similarly. higher value leads to less contours, that means lower sensitivity and lower change score.
 
 4. **What would you suggest implementing to improve data collection of unique cases in the future?**
